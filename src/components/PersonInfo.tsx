@@ -9,8 +9,9 @@ const PersonInfo:FC<{person: Person}> = ({person}) => {
             <div><div className="field">Gender</div> <div className="value">{person.gender}</div></div>
             <div><div className="field">Height</div> <div className="value">{person.height}</div></div>
             <div><div className="field">Mass</div> <div className="value">{person.mass}</div></div>
-            <div>
-                <a href={person.homeworld} target="_blank" rel="noopenner noreferrer">Home World</a>
+              <div><div className="field">Homeworld</div>
+                  <div className="value">{person.homeworld?.name} - <span className="field">{person.homeworld?.climate}</span>
+                  </div>
             </div>
         </div>
         <div className="star-wars">

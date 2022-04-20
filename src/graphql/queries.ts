@@ -4,10 +4,6 @@ const GET_PEOPLE = gql`
   query Query($page: Int){
     people(page: $page){
       name
-      height
-      mass
-      gender
-      homeworld
     }
   }
 `
@@ -19,7 +15,10 @@ const GET_PERSON = gql`
         height
         mass
         gender
-        homeworld
+        homeworld {
+          name
+          climate
+        }
       }
     }
   `
